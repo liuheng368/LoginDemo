@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="LoginDemo" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="登录页面" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IiW-0Y-wOu">
+                                <rect key="frame" x="153" y="122" width="69.5" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="输入账号" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="5GT-ro-4MD">
+                                <rect key="frame" x="30" y="187" width="315" height="30"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tFA-LI-vV0">
+                                <rect key="frame" x="165" y="417" width="45" height="30"/>
+                                <state key="normal" title="登录"/>
+                            </button>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="输入密码" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ehz-5W-ezc">
+                                <rect key="frame" x="30" y="248" width="315" height="30"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="ehz-5W-ezc" firstAttribute="centerX" secondItem="5GT-ro-4MD" secondAttribute="centerX" id="7eb-zG-zzy"/>
+                            <constraint firstItem="ehz-5W-ezc" firstAttribute="top" secondItem="5GT-ro-4MD" secondAttribute="bottom" constant="31" id="Ihh-Ls-rQQ"/>
+                            <constraint firstItem="tFA-LI-vV0" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="KxO-9m-nQb"/>
+                            <constraint firstItem="5GT-ro-4MD" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="TI3-aA-7ye"/>
+                            <constraint firstItem="5GT-ro-4MD" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" constant="187" id="TIY-2v-Qc3"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="5GT-ro-4MD" secondAttribute="trailing" constant="30" id="bTT-wJ-j9G"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="tFA-LI-vV0" secondAttribute="bottom" constant="220" id="epg-XX-iff"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="ehz-5W-ezc" secondAttribute="trailing" constant="30" id="g0I-JV-S6u"/>
+                            <constraint firstItem="5GT-ro-4MD" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="30" id="hW1-xt-tWe"/>
+                            <constraint firstItem="IiW-0Y-wOu" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="j08-Oi-SQl"/>
+                            <constraint firstItem="tFA-LI-vV0" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="165" id="l01-VR-YmW"/>
+                            <constraint firstItem="5GT-ro-4MD" firstAttribute="top" secondItem="IiW-0Y-wOu" secondAttribute="bottom" constant="44" id="l48-8Z-CRN"/>
+                            <constraint firstItem="ehz-5W-ezc" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="30" id="vYg-Wq-3JJ"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+        </scene>
+    </scenes>
+</document>
