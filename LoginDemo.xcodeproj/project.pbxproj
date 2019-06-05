@@ -16,6 +16,7 @@
 		02D7441C22A7B5B200F3396F /* BDKeychainConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02D7441922A7B5B200F3396F /* BDKeychainConfiguration.swift */; };
 		02D7441D22A7B5B200F3396F /* BDKeychianManage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02D7441A22A7B5B200F3396F /* BDKeychianManage.swift */; };
 		02D7441E22A7B5B200F3396F /* BDKeychianQuery.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02D7441B22A7B5B200F3396F /* BDKeychianQuery.swift */; };
+		A9E6258A24EB93E61719EA2E /* Pods_LoginDemo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C4A282062EF4D72D962D2702 /* Pods_LoginDemo.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,6 +31,9 @@
 		02D7441922A7B5B200F3396F /* BDKeychainConfiguration.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BDKeychainConfiguration.swift; sourceTree = "<group>"; };
 		02D7441A22A7B5B200F3396F /* BDKeychianManage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BDKeychianManage.swift; sourceTree = "<group>"; };
 		02D7441B22A7B5B200F3396F /* BDKeychianQuery.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BDKeychianQuery.swift; sourceTree = "<group>"; };
+		4362FE885DC8EC20EB31BF9D /* Pods-LoginDemo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LoginDemo.debug.xcconfig"; path = "Target Support Files/Pods-LoginDemo/Pods-LoginDemo.debug.xcconfig"; sourceTree = "<group>"; };
+		8EF43A57E09054D8299776B8 /* Pods-LoginDemo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LoginDemo.release.xcconfig"; path = "Target Support Files/Pods-LoginDemo/Pods-LoginDemo.release.xcconfig"; sourceTree = "<group>"; };
+		C4A282062EF4D72D962D2702 /* Pods_LoginDemo.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_LoginDemo.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -37,6 +41,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A9E6258A24EB93E61719EA2E /* Pods_LoginDemo.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -48,6 +53,8 @@
 			children = (
 				02D7440222A7660500F3396F /* LoginDemo */,
 				02D7440122A7660500F3396F /* Products */,
+				C8D3669B4165BBBBC1BC39D6 /* Pods */,
+				362F7A9F20F1FA18FCA34ED0 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -84,6 +91,24 @@
 			path = keychian;
 			sourceTree = "<group>";
 		};
+		362F7A9F20F1FA18FCA34ED0 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				C4A282062EF4D72D962D2702 /* Pods_LoginDemo.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		C8D3669B4165BBBBC1BC39D6 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				4362FE885DC8EC20EB31BF9D /* Pods-LoginDemo.debug.xcconfig */,
+				8EF43A57E09054D8299776B8 /* Pods-LoginDemo.release.xcconfig */,
+			);
+			name = Pods;
+			path = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -91,9 +116,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 02D7441222A7660600F3396F /* Build configuration list for PBXNativeTarget "LoginDemo" */;
 			buildPhases = (
+				AA43858055FA4C6A5797BB4B /* [CP] Check Pods Manifest.lock */,
 				02D743FC22A7660500F3396F /* Sources */,
 				02D743FD22A7660500F3396F /* Frameworks */,
 				02D743FE22A7660500F3396F /* Resources */,
+				6AF1E80042C194392D99AEE3 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -149,6 +176,53 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		6AF1E80042C194392D99AEE3 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-LoginDemo/Pods-LoginDemo-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/SwiftyRSA/SwiftyRSA.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftyRSA.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-LoginDemo/Pods-LoginDemo-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		AA43858055FA4C6A5797BB4B /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-LoginDemo-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		02D743FC22A7660500F3396F /* Sources */ = {
@@ -304,6 +378,7 @@
 		};
 		02D7441322A7660600F3396F /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 4362FE885DC8EC20EB31BF9D /* Pods-LoginDemo.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -322,6 +397,7 @@
 		};
 		02D7441422A7660600F3396F /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 8EF43A57E09054D8299776B8 /* Pods-LoginDemo.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
