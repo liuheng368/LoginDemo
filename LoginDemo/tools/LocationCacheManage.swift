@@ -5,6 +5,7 @@
 //  Created by 刘恒 on 2019/6/5.
 //  Copyright © 2019 刘恒. All rights reserved.
 //
+//  本地缓存（归档）
 //  注：所有文件的根目录都是.../document/
 
 import Foundation
