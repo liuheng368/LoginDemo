@@ -13,7 +13,7 @@
         <!--Login View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="LoginViewController" customModule="LoginDemo" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="LoginViewController" id="BYZ-38-t0r" customClass="LoginViewController" customModule="LoginDemo" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -30,6 +30,9 @@
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tFA-LI-vV0">
                                         <rect key="frame" x="30" y="367" width="315" height="30"/>
                                         <state key="normal" title="登录"/>
+                                        <connections>
+                                            <action selector="didPressPassword:" destination="BYZ-38-t0r" eventType="touchDragOutside" id="JYO-DE-6uM"/>
+                                        </connections>
                                     </button>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="输入密码" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ehz-5W-ezc">
                                         <rect key="frame" x="30" y="272" width="315" height="30"/>
@@ -111,12 +114,31 @@
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <connections>
+                        <outlet property="btnAuthId" destination="9r0-xE-SiS" id="FBo-WC-ZyW"/>
+                        <outlet property="tfAccout" destination="5GT-ro-4MD" id="q7G-Pw-4aw"/>
+                        <outlet property="tfPassword" destination="ehz-5W-ezc" id="gog-Zn-F1O"/>
                         <outlet property="vAythID" destination="a2Y-3t-Lkk" id="jKv-cB-cex"/>
                         <outlet property="vPassword" destination="8Cl-Qq-fFO" id="DKZ-RW-fM4"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="145" y="27"/>
+        </scene>
+        <!--Root View Controller-->
+        <scene sceneID="Nw2-eX-zor">
+            <objects>
+                <viewController storyboardIdentifier="RootViewController" id="zth-Qz-AXw" customClass="RootViewController" customModule="LoginDemo" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bH-4u-OLH">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="YaX-NG-Q3C"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="gRr-Hs-Xzm" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="818" y="27"/>
         </scene>
     </scenes>
     <resources>

@@ -76,6 +76,7 @@ class LocalAuthManager {
             authContent.evaluatePolicy(.deviceOwnerAuthenticationWithBiometrics, localizedReason: strTips) {(success,error) in
                 if success {
                     //evaluatedPolicyDomainState 只有生物验证成功才会有值
+                    //可本地记录此值，如果此值改变则表示生物信息是否变更
                     if let _ = authContent.evaluatedPolicyDomainState {
                         //如果不放在主线程回调可能会有5-6s的延迟
                         DispatchQueue.main.async {
