@@ -19,11 +19,11 @@
 		02D7442E22A9256000F3396F /* UserInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02D7442D22A9256000F3396F /* UserInfo.swift */; };
 		02D7443222A925BE00F3396F /* UserInfoModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02D7443022A925BD00F3396F /* UserInfoModel.swift */; };
 		02D7443522A9272800F3396F /* UserTokenModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02D7443422A9272800F3396F /* UserTokenModel.swift */; };
-		02D7444122ADFF5400F3396F /* BDKeychainConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02D7443E22ADFF5400F3396F /* BDKeychainConfiguration.swift */; };
-		02D7444222ADFF5400F3396F /* BDKeychianManage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02D7443F22ADFF5400F3396F /* BDKeychianManage.swift */; };
-		02D7444322ADFF5400F3396F /* BDKeychianQuery.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02D7444022ADFF5400F3396F /* BDKeychianQuery.swift */; };
+		02D7444122ADFF5400F3396F /* KeychainConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02D7443E22ADFF5400F3396F /* KeychainConfiguration.swift */; };
 		02D7444522ADFF9000F3396F /* LoginManage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02D7444422ADFF9000F3396F /* LoginManage.swift */; };
 		02D7444722AE02D500F3396F /* LogoutManage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02D7444622AE02D500F3396F /* LogoutManage.swift */; };
+		02D7444C22AE39EE00F3396F /* KeychianManage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02D7444922AE39EE00F3396F /* KeychianManage.swift */; };
+		02D7444D22AE39EE00F3396F /* KeychianQuery.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02D7444A22AE39EE00F3396F /* KeychianQuery.swift */; };
 		A9E6258A24EB93E61719EA2E /* Pods_LoginDemo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C4A282062EF4D72D962D2702 /* Pods_LoginDemo.framework */; };
 /* End PBXBuildFile section */
 
@@ -42,12 +42,12 @@
 		02D7442D22A9256000F3396F /* UserInfo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserInfo.swift; sourceTree = "<group>"; };
 		02D7443022A925BD00F3396F /* UserInfoModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserInfoModel.swift; sourceTree = "<group>"; };
 		02D7443422A9272800F3396F /* UserTokenModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserTokenModel.swift; sourceTree = "<group>"; };
-		02D7443E22ADFF5400F3396F /* BDKeychainConfiguration.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BDKeychainConfiguration.swift; sourceTree = "<group>"; };
-		02D7443F22ADFF5400F3396F /* BDKeychianManage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BDKeychianManage.swift; sourceTree = "<group>"; };
-		02D7444022ADFF5400F3396F /* BDKeychianQuery.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BDKeychianQuery.swift; sourceTree = "<group>"; };
+		02D7443E22ADFF5400F3396F /* KeychainConfiguration.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KeychainConfiguration.swift; sourceTree = "<group>"; };
 		02D7444422ADFF9000F3396F /* LoginManage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginManage.swift; sourceTree = "<group>"; };
 		02D7444622AE02D500F3396F /* LogoutManage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogoutManage.swift; sourceTree = "<group>"; };
 		02D7444822AE379500F3396F /* LoginDemo.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = LoginDemo.entitlements; sourceTree = "<group>"; };
+		02D7444922AE39EE00F3396F /* KeychianManage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KeychianManage.swift; sourceTree = "<group>"; };
+		02D7444A22AE39EE00F3396F /* KeychianQuery.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KeychianQuery.swift; sourceTree = "<group>"; };
 		4362FE885DC8EC20EB31BF9D /* Pods-LoginDemo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LoginDemo.debug.xcconfig"; path = "Target Support Files/Pods-LoginDemo/Pods-LoginDemo.debug.xcconfig"; sourceTree = "<group>"; };
 		8EF43A57E09054D8299776B8 /* Pods-LoginDemo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LoginDemo.release.xcconfig"; path = "Target Support Files/Pods-LoginDemo/Pods-LoginDemo.release.xcconfig"; sourceTree = "<group>"; };
 		C4A282062EF4D72D962D2702 /* Pods_LoginDemo.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_LoginDemo.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -126,9 +126,9 @@
 		02D7443D22ADFF5400F3396F /* keychian */ = {
 			isa = PBXGroup;
 			children = (
-				02D7443E22ADFF5400F3396F /* BDKeychainConfiguration.swift */,
-				02D7443F22ADFF5400F3396F /* BDKeychianManage.swift */,
-				02D7444022ADFF5400F3396F /* BDKeychianQuery.swift */,
+				02D7444922AE39EE00F3396F /* KeychianManage.swift */,
+				02D7444A22AE39EE00F3396F /* KeychianQuery.swift */,
+				02D7443E22ADFF5400F3396F /* KeychainConfiguration.swift */,
 			);
 			path = keychian;
 			sourceTree = "<group>";
@@ -275,8 +275,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				02D7444322ADFF5400F3396F /* BDKeychianQuery.swift in Sources */,
-				02D7444122ADFF5400F3396F /* BDKeychainConfiguration.swift in Sources */,
+				02D7444122ADFF5400F3396F /* KeychainConfiguration.swift in Sources */,
 				02D7444522ADFF9000F3396F /* LoginManage.swift in Sources */,
 				02D7442322A7C3FA00F3396F /* RSAHandler.swift in Sources */,
 				02D7442522A7C85000F3396F /* LocationCacheManage.swift in Sources */,
@@ -284,10 +283,11 @@
 				02D7442C22A7FC2900F3396F /* RootViewController.swift in Sources */,
 				02D7443522A9272800F3396F /* UserTokenModel.swift in Sources */,
 				02D7441622A7A29200F3396F /* AuthID.swift in Sources */,
-				02D7444222ADFF5400F3396F /* BDKeychianManage.swift in Sources */,
 				02D7444722AE02D500F3396F /* LogoutManage.swift in Sources */,
 				02D7440622A7660500F3396F /* LoginViewController.swift in Sources */,
+				02D7444C22AE39EE00F3396F /* KeychianManage.swift in Sources */,
 				02D7440422A7660500F3396F /* AppDelegate.swift in Sources */,
+				02D7444D22AE39EE00F3396F /* KeychianQuery.swift in Sources */,
 				02D7442E22A9256000F3396F /* UserInfo.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

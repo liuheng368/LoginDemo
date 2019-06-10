@@ -9,13 +9,13 @@
 
 import UIKit
 
-let BD_REGISTER_TOKEN_LOCAL_FILENAME = "BD_REGISTER_TOKEN_LOCAL_FILENAME"
+let REGISTER_TOKEN_LOCAL_FILENAME = "REGISTER_TOKEN_LOCAL_FILENAME"
 class UserInfoModel: NSObject,NSCoding {
     
-    /// BD名称
+    /// 名称
     private(set) var name:String = "name"
     
-    /// BD电话
+    /// 电话
     private(set) var phone:String = ""
     
     /// 头像
@@ -41,7 +41,7 @@ extension UserInfoModel {
     /// get
     ///
     public class func getInfoModel() -> UserInfoModel? {
-        if let infoModel = LocalCacheManage.DDUnarchive(fileName: BD_REGISTER_TOKEN_LOCAL_FILENAME) as? UserInfoModel {
+        if let infoModel = LocalCacheManage.DDUnarchive(fileName: REGISTER_TOKEN_LOCAL_FILENAME) as? UserInfoModel {
             return infoModel
         }else{
             return nil
@@ -51,7 +51,7 @@ extension UserInfoModel {
     /// update
     ///
     public class func updateUserInfoModel(_ userInfo:UserInfoModel){
-        if LocalCacheManage.DDArchive(fileName: BD_REGISTER_TOKEN_LOCAL_FILENAME, objc: userInfo) {
+        if LocalCacheManage.DDArchive(fileName: REGISTER_TOKEN_LOCAL_FILENAME, objc: userInfo) {
         }else{
             print("失败")
         }
@@ -60,6 +60,6 @@ extension UserInfoModel {
     /// clean
     ///
     public class func cleanUserInfoModel() {
-        LocalCacheManage.DDFileDelete(fileName: BD_REGISTER_TOKEN_LOCAL_FILENAME)
+        LocalCacheManage.DDFileDelete(fileName: REGISTER_TOKEN_LOCAL_FILENAME)
     }
 }

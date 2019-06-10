@@ -15,7 +15,7 @@ class UserTokenModel: NSObject {
     /// 用户名（keychain保存）
     public var userAccout:String = ""    //Keychian - accout
     
-    /// BD唯一身份码（keychain保存）
+    /// 唯一身份码（keychain保存）
     public var accessToken:String = "user_token"    //Keychian -
     
     override init() {}
@@ -27,7 +27,7 @@ extension UserTokenModel {
     ///
     public class func getLoginInfoModel() -> UserTokenModel? {
         do{
-            if let model = try BDKeychianManage.fetchAllToken().first{
+            if let model = try KeychianManage.fetchAllToken().first{
                 let mm = UserTokenModel()
                 mm.userAccout = model.key
                 mm.accessToken = model.value
@@ -44,10 +44,10 @@ extension UserTokenModel {
     {
         //保证同时只有一个账号
         do {
-            let _ = try BDKeychianQuery.fetchKeychainData(account: userAccout)
+            let _ = try KeychianQuery.fetchKeychainData(account: userAccout)
         } catch KeychainError.infoEmpty {
             do {
-                try BDKeychianManage.deleteAllAccoutInfo()
+                try KeychianManage.deleteAllAccoutInfo()
             } catch {}
         } catch {}
         
@@ -56,7 +56,7 @@ extension UserTokenModel {
         model.userAccout = userAccout
         do {
             try
-                BDKeychianQuery.saveKeychainData(account: userAccout, accoutInfo: accessToken)
+                KeychianQuery.saveKeychainData(account: userAccout, accoutInfo: accessToken)
             return model
         } catch {
             print(accessToken)
@@ -69,7 +69,7 @@ extension UserTokenModel {
     ///
     public class func cleanUserLoginInfoModel() {
         do {
-            try BDKeychianManage.deleteAllAccoutInfo()
+            try KeychianManage.deleteAllAccoutInfo()
         } catch {
             print(UserInfoShared.userLoginInfoModel.userAccout)
         }
