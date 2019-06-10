@@ -21,7 +21,7 @@ class LoginManage {
     public class func passWordLogin(userAccout:String, password:String, fail:@escaping failCallBack) {
         let resPassWord = RSAHandler.RSAEncryptedHandler(password) ?? ""
         /*
-            与后端交互
+            与后端交互，省略
          */
         LocalAuthManager.userLocalAuth("开启生物验证") {(state, error) -> (Void) in
             if state == .success {
@@ -54,6 +54,12 @@ class LoginManage {
 
 extension LoginManage{
     private class func loginSucess() {
+        //用户个人信息归档
+        let model = UserInfoModel()
+        model.name = "刘恒"
+        model.phone = "15102204662"
+        UserInfo.setUserVirtualModel(model)
+        //rootVC切换
         let storyboard = UIStoryboard(name: "Main", bundle: nil)
         let vcLogin = UIApplication.shared.keyWindow?.rootViewController
         let vcRoot = storyboard.instantiateViewController(withIdentifier: "RootViewController")

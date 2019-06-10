@@ -13,13 +13,13 @@ let REGISTER_TOKEN_LOCAL_FILENAME = "REGISTER_TOKEN_LOCAL_FILENAME"
 class UserInfoModel: NSObject,NSCoding {
     
     /// 名称
-    private(set) var name:String = "name"
+    public var name:String = "name"
     
     /// 电话
-    private(set) var phone:String = ""
+    public var phone:String = ""
     
     /// 头像
-    private(set) var userPhoto:String = ""
+    public var userPhoto:String = ""
     
     override init() {}
     
