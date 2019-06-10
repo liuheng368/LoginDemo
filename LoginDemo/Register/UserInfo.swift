@@ -14,8 +14,8 @@ final class UserInfo: NSObject {
     
     public static let shared = UserInfo()
     
-    /// 是否登录
-    public class func isLogin() -> Bool{return shared._isLogin()}
+    /// 是否已登录且已验证生物识别
+    public class func isLogged() -> Bool{return shared._isLogged()}
     
     /// 登录用户个人信息
     private(set) var userLoginInfoModel : UserTokenModel = UserTokenModel()
@@ -48,7 +48,7 @@ extension UserInfo {
         }
     }
 
-    private func _isLogin() -> Bool {
+    private func _isLogged() -> Bool {
         if userLoginInfoModel.accessToken.count > 0 &&
             userLoginInfoModel.userAccout.count > 0 {
             return true

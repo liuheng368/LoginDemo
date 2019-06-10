@@ -31,7 +31,7 @@
                                         <rect key="frame" x="30" y="367" width="315" height="30"/>
                                         <state key="normal" title="登录"/>
                                         <connections>
-                                            <action selector="didPressPassword:" destination="BYZ-38-t0r" eventType="touchDragOutside" id="JYO-DE-6uM"/>
+                                            <action selector="didPressPassword:" destination="BYZ-38-t0r" eventType="touchUpInside" id="xbJ-lh-iW8"/>
                                         </connections>
                                     </button>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="输入密码" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ehz-5W-ezc">
@@ -115,6 +115,7 @@
                     </view>
                     <connections>
                         <outlet property="btnAuthId" destination="9r0-xE-SiS" id="FBo-WC-ZyW"/>
+                        <outlet property="btnTypeChange" destination="APT-VL-xba" id="e8P-at-cgX"/>
                         <outlet property="tfAccout" destination="5GT-ro-4MD" id="q7G-Pw-4aw"/>
                         <outlet property="tfPassword" destination="ehz-5W-ezc" id="gog-Zn-F1O"/>
                         <outlet property="vAythID" destination="a2Y-3t-Lkk" id="jKv-cB-cex"/>
@@ -132,7 +133,24 @@
                     <view key="view" contentMode="scaleToFill" id="8bH-4u-OLH">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nUn-Zc-pFF">
+                                <rect key="frame" x="118" y="268.5" width="139" height="130"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="130" id="DGx-uy-oqZ"/>
+                                    <constraint firstAttribute="width" constant="139" id="ohP-ko-x7x"/>
+                                </constraints>
+                                <state key="normal" title="logou"/>
+                                <connections>
+                                    <action selector="didPressLogout:" destination="zth-Qz-AXw" eventType="touchUpInside" id="CDR-5n-0wY"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="nUn-Zc-pFF" firstAttribute="centerX" secondItem="8bH-4u-OLH" secondAttribute="centerX" id="cH8-XS-jeq"/>
+                            <constraint firstItem="nUn-Zc-pFF" firstAttribute="centerY" secondItem="8bH-4u-OLH" secondAttribute="centerY" id="gV4-4Q-6yU"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="YaX-NG-Q3C"/>
                     </view>
                 </viewController>

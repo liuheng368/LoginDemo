@@ -11,6 +11,7 @@ import UIKit
 import SwiftyRSA
 
 class RSAHandler {
+    //加密
     public static func RSAEncryptedHandler(_ passWord:String) ->String? {
         do{
             //rsa加密
@@ -26,6 +27,7 @@ class RSAHandler {
         }
     }
     
+    //解密
     public static func  RSADecryptedHandler(_ RSAPassWord:String) -> String? {
         do {
             //rsa解密
@@ -43,17 +45,14 @@ class RSAHandler {
 }
 
 let publicKey = """
------BEGIN PUBLIC KEY-----
 MIGfMA0GCSqGSIb3DQEBAQUAA4GNADCBiQKBgQCA4o3Fu8bXeoTP0PBdjqtMhCE0
 qm5a03+dslcv6mIIS8YnYITE2e9K2wu+s1+adFyWY9RCWWX1yGIy4EN4he5b8Pt9
 N+HRsNyM8eSfBW9a43U5MEKm47pvMdjWomwUj+8Jo2d5tAWXssgKLAkv3rY0Qkcv
 eu4y5mYUd7F7sPbXIQIDAQAB
------END PUBLIC KEY-----
 """
 
 //私钥一般保存在服务器上
 let privateKey = """
------BEGIN RSA PRIVATE KEY-----
 MIICWwIBAAKBgQCA4o3Fu8bXeoTP0PBdjqtMhCE0qm5a03+dslcv6mIIS8YnYITE
 2e9K2wu+s1+adFyWY9RCWWX1yGIy4EN4he5b8Pt9N+HRsNyM8eSfBW9a43U5MEKm
 47pvMdjWomwUj+8Jo2d5tAWXssgKLAkv3rY0Qkcveu4y5mYUd7F7sPbXIQIDAQAB
@@ -67,5 +66,4 @@ gYATCZbLExJ1QMVjwKLHuhbGH1QdQbmuVAm9T5x1wx0Rs8qLHq1oej8WmwJAfQsu
 L2t65B9Lt3K9V6fXfgFvdCuKwUZw1TWVk5iIOWUh6DWLfIjKR/UgI5h3pzI8nkAE
 8O+ToYpEZtYbumibPQJAXaZvKYm0PO5aftLSH7e4lV9wT88eFBeIdBYtGGtOnNkC
 B4PzyckHxkMfasYllshR59/GO6AW+S1mqQH19Tb9Bw==
------END RSA PRIVATE KEY-----
 """

@@ -15,15 +15,23 @@ class LoginViewController: UIViewController {
     @IBOutlet weak var vAythID: UIView!
     @IBOutlet weak var tfAccout: UITextField!
     @IBOutlet weak var tfPassword: UITextField!
+    @IBOutlet weak var btnTypeChange: UIButton!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        if LocalAuthManager.getBiometryType() == .touchID {
-            btnAuthId.setBackgroundImage(UIImage(named: "TOUCHID"), for: .normal)
-        }else if LocalAuthManager.getBiometryType() == .faceID{
-           btnAuthId.setBackgroundImage(UIImage(named: "FACEID"), for: .normal)
+        self.view.backgroundColor = UIColor.white
+        if UserInfo.isLogged() {
+            if LocalAuthManager.getBiometryType() == .touchID {
+                btnAuthId.setBackgroundImage(UIImage(named: "TOUCHID"), for: .normal)
+            }else if LocalAuthManager.getBiometryType() == .faceID{
+                btnAuthId.setBackgroundImage(UIImage(named: "FACEID"), for: .normal)
+            }else{
+                btnAuthId.isHidden = true
+            }
         }else{
-            btnAuthId.isHidden = true
+            //隐藏生物识别
+            btnTypeChange.isHidden = true
+            self.view.exchangeSubview(at: 0, withSubviewAt: 1)
         }
     }
 
@@ -32,36 +40,20 @@ class LoginViewController: UIViewController {
     }
     
     @IBAction func didPressPassword(_ sender: Any) {
-        LocalAuthManager.userLocalAuth("开启生物验证") {[weak self] (state, error) -> (Void) in
-            guard let `self` = self else{return}
-            if state == .success {
-                UserInfo.setUserInfoModel(self.tfAccout.text!, accessToken: self.tfPassword.text!)
-                self.loginSucess()
-            }else{
-                print("登录失败")
-            }
+        LoginManage.passWordLogin(userAccout: self.tfAccout.text!, password: self.tfPassword.text!) { (errorCode) in
+            print("\(String(describing: errorCode))")
         }
-        loginSucess()
     }
     
     @IBAction func didPressAuthLogin(_ sender: Any) {
-        LocalAuthManager.userLocalAuth("生物验证") {[weak self] (state, error) -> (Void) in
-            guard let `self` = self else{return}
-            if state == .success {
-                self.loginSucess()
-            }else{
-                print("登录失败")
-            }
+        LoginManage.authLogin { (errorCode) in
+            print("\(String(describing: errorCode))")
         }
     }
 
-    private func loginSucess() {
-        let vcLogin = UIApplication.shared.keyWindow?.rootViewController
-        let storyboard = UIStoryboard(name: "main", bundle: nil)
-        let vcRoot = storyboard.instantiateViewController(withIdentifier: "LoginViewController")
-        UIApplication.shared.keyWindow?.rootViewController = vcRoot
-        //手动释放登录页面
-        vcLogin?.dismiss(animated: false, completion: nil)
+    
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        self.view.endEditing(true)
     }
 }
 

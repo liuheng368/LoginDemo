@@ -44,9 +44,11 @@ extension UserTokenModel {
     {
         //保证同时只有一个账号
         do {
-            if let _ = try BDKeychianQuery.fetchKeychainData(account: userAccout){}
-            else{
-                try BDKeychianManage.deleteAllAccoutInfo()}
+            let _ = try BDKeychianQuery.fetchKeychainData(account: userAccout)
+        } catch KeychainError.infoEmpty {
+            do {
+                try BDKeychianManage.deleteAllAccoutInfo()
+            } catch {}
         } catch {}
         
         let model = UserTokenModel()

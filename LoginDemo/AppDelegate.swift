@@ -14,14 +14,11 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     var window: UIWindow?
     
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
-        let storyboard = UIStoryboard(name: "main", bundle: nil)
-        if UserInfo.isLogin() {
-            let vc = storyboard.instantiateViewController(withIdentifier: "LoginViewController")
-            self.window?.rootViewController = vc
-        }else{
-            let vc = storyboard.instantiateViewController(withIdentifier: "RootViewController")
-            self.window?.rootViewController = vc
-        }
+        self.window = UIWindow(frame: UIScreen.main.bounds)
+        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+        self.window?.rootViewController =
+            storyboard.instantiateInitialViewController()
+        self.window?.makeKeyAndVisible()
         return true
     }
 
